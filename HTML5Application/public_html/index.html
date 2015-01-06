@@ -1,17 +1,86 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Accueil</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="all" type="text/css" href="style.css" />
     </head>
     <body>
-        <div>TODO write content</div>
-        <p>it's work !</p>
+        
+        <h1>   <img src='logo frozen.png'>   </h1>
+        <h2 class=button id='idaccueil' onclick="accueil()">Accueil</h2><h2 class=button id='idnew' onclick="buble()">Jouer</h2><h2 class=button id='idscore' onclick="score()">Score</h2>
+        <div id='scoremax'>    
+            
+        </div>
+        <div id='jeu'>
+            
+        </div>
     </body>
 </html>
+
+<script>
+    var ok=false;
+                codeHTM='';
+               codeHTM+='<h3 >Score Max</h3>';
+               codeHTM+='<p>'+localStorage.key(0)+' '+localStorage.getItem(localStorage.key(0))+'</p>';
+                document.getElementById('scoremax').innerHTML = codeHTM;
+                codeHTML='';
+                  codeHTML+='<h3>Bienvenue sur Frozen Bubble</h3>Ce jeu vidéo est un puzzle libre qui à été développé par Guillaume Cottenceau. Il fonctionnait au départ sur plusieurs systèmes d\'exploitation tels que GNU/Linux, Mac OS X et Windows.</br> Nous avons eut comme objectif de le réaliser dans une interface Web, et nous vous présentons le résultats. ';
+                  codeHTML+='<h4>Principe du jeu</h4>';
+                  codeHTML+='Il existe 3 niveaux de difficultés :';
+                  codeHTML+='Sur le premier, l\'objectif est simple vous devez réussir a placer le maximum de balle sur le tableau avant que les balles franchisse la ligne, faites attention ! Le plateau dessens au fur et à mesure que vous tirer des boules';
+                  codeHTML+='Sur le deuxieme, on reprend l\'objectif du premier sauf que ce n\'est plus vaut tire qui font desendre le plateau mais un chronometre.';
+                  codeHTML+='Sur le dernier, c\'est un super remake de Puzzle Bubble. Votre objectif étant d\'enlever les balles de couleurs sur le plateau en les accrochant par 3 ou plus.'
+                  codeHTML+='<video controls><source src="video.mp4" type="video/mp4"><source src="foo.mp4">Votre navigateur ne gère pas l\'élément <code>video</code></video>';
+                  
+                 document.getElementById('jeu').innerHTML = codeHTML;
+                
+    function buble(){
+        codeHTML='';
+        codeHTML+='<audio src="frozen-mainzik-1p.ogg" autoplay loop>Votre navigateur ne supporte pas l\'élément <code>audio</code></audio>';
+        codeHTML+='<canvas id=frozen width=640 height=700>';
+        codeHTML+='</canvas>';
+        document.getElementById('jeu').innerHTML = codeHTML;
+	var monCanvas= document.getElementById('frozen');
+	if(monCanvas.getContext){
+            var ctx =monCanvas.getContext('2d');
+            ctx.fillStyle="black";
+            //ctx.save;
+            ctx.fillRect(0,600,640,700);
+		var inter2=setInterval(function(){ctx.fillRect(0,0,100,16);ctx.rotate(360/16*Math.PI/180)},40);
+		var inter=setInterval(function(){ctx.translate(640/9,480/9)},40*16);
+		}
+            
+        }
+        
+           function score(){
+               codeHTML='';
+               codeHTML+='<table id="tableau">';
+               codeHTML+='<tr><th>Rang</th><th> Nom du joueur</th> <th> Score </th></tr>';
+               var tab;
+                for (var i=1;i<11;i++){
+                    codeHTML+='<tr><td>'+i+'</td><td>'+localStorage.key(i)+'</td><td>'+localStorage.getItem(localStorage.key(i))+'</td></tr>';
+                   }
+                codeHTML+='</table>';
+                document.getElementById('jeu').innerHTML = codeHTML;
+              }
+              
+              function accueil(){
+                  codeHTML='';
+                  codeHTML+='<h3>Bienvenue sur Frozen Bubble</h3>Ce jeu vidéo est un puzzle libre qui à été développé par Guillaume Cottenceau. Il fonctionnait au départ sur plusieurs systèmes d\'exploitation tels que GNU/Linux, Mac OS X et Windows.</br> Nous avons eut comme objectif de le réaliser dans une interface Web, et nous vous présentons le résultats. ';
+                  codeHTML+='<h4>Principe du jeu</h4>';
+                  codeHTML+='Il existe 3 niveaux de difficultés :';
+                  codeHTML+='Sur le premier, l\'objectif est simple vous devez réussir a placer le maximum de balle sur le tableau avant que les balles franchisse la ligne, faites attention ! Le plateau dessens au fur et à mesure que vous tirer des boules';
+                  codeHTML+='Sur le deuxieme, on reprend l\'objectif du premier sauf que ce n\'est plus vaut tire qui font desendre le plateau mais un chronometre.';
+                  codeHTML+='Sur le dernier, c\'est un super remake de Puzzle Bubble. Votre objectif étant d\'enlever les balles de couleurs sur le plateau en les accrochant par 3 ou plus.'
+                  codeHTML+='<video controls><source src="video.mp4" type="video/mp4"><source src="foo.mp4">Votre navigateur ne gère pas l\'élément <code>video</code></video>';
+                  
+                 document.getElementById('jeu').innerHTML = codeHTML;
+              }
+              
+              
+                
+     </script>
+    

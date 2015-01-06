@@ -1,0 +1,100 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 déc. 2014, 12:22:04
+    Author     : Mahon--Puget
+*/
+
+body{
+    background-image:url(fond_ecran.jpg);
+    	background-repeat:no-repeat;
+	//background-position:center center;
+	background-size: 100% 1200%;
+}
+
+h1{
+    font-size: larger;
+    text-align: center;
+    border-top-left-radius: 30px 20px;
+    border-top-right-radius: 30px 20px;
+    border-bottom-right-radius:0px 0px;
+    border-bottom-left-radius: 0px 0px;
+    background: #FFFFFF;
+    border:solid;
+    border-width:2px;
+    border-color:#000099;
+    font-family:Comic Sans, Comic Sans MS, cursive;
+    width: 60%;
+    margin-left:20%;
+    
+}
+
+#jeu{
+    
+/*    border-top-left-radius: 30px 20px;
+    border-top-right-radius: 30px 20px;
+    border-bottom-right-radius:30px 20px;
+    border-bottom-left-radius: 30px 20px;*/
+    background: #FFFFFF;
+    border:solid;
+    border-width:2px;
+    border-color:#000099;
+    font-family:Comic Sans, Comic Sans MS, cursive;
+    width: 50%;
+    height: 75%;
+    margin-left:25%; 
+    padding-left: 1%;
+    padding-right: 1%;    
+}
+
+.button{
+    font-size: larger;
+    text-align: center;
+    border-top-left-radius: 30px 20px;
+    border-top-right-radius: 30px 20px;
+    border-bottom-right-radius:30px 20px;
+    border-bottom-left-radius: 30px 20px;
+    background: #FFFFFF;
+    border:solid;
+    border-width:2px;
+    border-color:#000099;
+    font-family:Comic Sans, Comic Sans MS, cursive;
+    width: 16%;
+    display: inline-table;
+   
+}
+
+#idnew{
+     margin-left:1%;
+}
+#idscore{
+    margin-left:1%;
+}
+#idaccueil{
+    margin-left:25%;
+}
+#scoremax{
+    font-size: larger;
+    text-align: center;
+    border-top-left-radius: 30px 20px;
+    border-top-right-radius: 30px 20px;
+    border-bottom-right-radius:30px 20px;
+    border-bottom-left-radius: 30px 20px;
+    background: #FFFFFF;
+    border:solid;
+    border-width:2px;
+    border-color:#000099;
+    font-family:Comic Sans, Comic Sans MS, cursive;
+    width: 16%;
+    margin-left:6%;
+    display: inline-table;
+}
+
+video{
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+}
